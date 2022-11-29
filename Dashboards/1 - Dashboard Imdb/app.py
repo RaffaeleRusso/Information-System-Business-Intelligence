@@ -189,45 +189,55 @@ else:
             st.text("Gross distribution (bil) for genre")
             fig2 = px.pie(df_filtered,values='Gross',names='genre_one')
             st.plotly_chart(fig2, use_container_width=True)
+
+        st.text("Histogram Genres")
+        fig11 = px.histogram(df_filtered, x='genre_one',color="genre_one")
+        st.plotly_chart(fig11, use_container_width=True)
+
+        st.text("No of Votes")
+        fig12 = px.histogram(df_filtered, x='No_of_Votes',color="genre_one")
+        st.plotly_chart(fig12, use_container_width=True)
         col3_, col4_= st.columns(2)
         with col3_:
             st.text("IMDb Rating histogram")
-            fig3 = px.histogram(df_filtered,x='IMDB_Rating') 
+            fig3 = px.histogram(df_filtered,x='IMDB_Rating',color=genere_one) 
             st.plotly_chart(fig3, use_container_width=True)
         with col4_:
             st.text("Metascore histogram")
-            fig4 = px.histogram(df_filtered,x='Meta_score') 
+            fig4 = px.histogram(df_filtered,x='Meta_score',color=genere_one) 
             st.plotly_chart(fig4, use_container_width=True)#,color_discrete_sequence = ['darkred'])
         col5_, col6_= st.columns(2)
         with col5_:
             st.text("Gross histogram")
-            fig5 = px.histogram(df_filtered,x='Gross') 
+            fig5 = px.histogram(df_filtered,x='Gross',color=genere_one) 
             st.plotly_chart(fig5, use_container_width=True)
         with col6_:
-            st.text("Votes No histogram")
-            fig6 = px.histogram(df_filtered,x='No_of_Votes') 
+            st.text("Release Year")
+            fig6 = px.histogram(df_filtered,x='Released_Year',color=genere_one) 
             st.plotly_chart(fig6, use_container_width=True)
         col7_, col8_= st.columns(2)
         with col7_:
             st.text("Runtime histogram")
-            fig7 = px.histogram(df_filtered,x='Runtime') 
+            fig7 = px.histogram(df_filtered,x='Runtime',color=genere_one) 
             st.plotly_chart(fig7, use_container_width=True)
             
         with col8_:
             st.text("Scatter Runtime-IMDb Rating")
-            fig8 = px.scatter(df, x="Runtime", y="IMDB_Rating")
+            fig8 = px.scatter(df_filtered, x="Runtime", y="IMDB_Rating",color=genere_one)
             st.plotly_chart(fig8, use_container_width=True)
 
         col9_, col10_= st.columns(2)
         with col9_:
             st.text("Scatter Gross-IMDb Rating")
-            fig9 = px.scatter(df, x="Gross", y="IMDB_Rating") 
+            fig9 = px.scatter(df_filtered, x="Gross", y="IMDB_Rating",color=genere_one) 
             st.plotly_chart(fig9, use_container_width=True)
             
         with col10_:
             st.text("Scatter Gross-Metascore")
-            fig10 = px.scatter(df, x="Gross", y="Meta_score")
+            fig10 = px.scatter(df_filtered, x="Gross", y="Meta_score",color=genere_one)
             st.plotly_chart(fig10, use_container_width=True)
+        
+       
             
             
 
