@@ -1,1 +1,10 @@
-Sono stati modellati i seguenti processi:
+Sono stati individuati e modellati i seguenti processi:
+-AperturaSRL
+-AumentoCapitaleSociale
+-RiduzioneCapitaleSociale
+-AmministrazioneStraordinaria
+-ConcordatoPreventivo
+-Fallimento
+-LiquidazioneCoattaAmministrativa
+
+Per ognuno dei processi riportati è stata creata una pool, divisa in swim lanes, ognuna delle quali contiene le task svolte dall'attore associato a quella precisa swim lane.
