@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="7.15.0" expressionLanguage="http://groovy.apache.org/" targetNamespace="http://bonitasoft.com/_MDcwUHMpEe2CeaOiceoz9A">
   <model:collaboration id="_MDcwUHMpEe2CeaOiceoz9A">
-    <model:participant id="_uly3IHM2Ee2OqfZx83RB5g" name="Pool" processRef="_MDdXYHMpEe2CeaOiceoz9A"/>
+    <model:participant id="_MBq2MHVvEe2lEvbJv59qEA" name="Pool" processRef="_MDdXYHMpEe2CeaOiceoz9A"/>
     <model:participant id="_MDdXenMpEe2CeaOiceoz9A" name="Employee actor">
       <model:documentation>This is an example of actor that is mapped to any ACME users</model:documentation>
     </model:participant>
@@ -9,9 +9,9 @@
     <model:participant id="_Zsaq8HMqEe2CeaOiceoz9A" name="Coniugi"/>
   </model:collaboration>
   <model:process id="_MDdXYHMpEe2CeaOiceoz9A" name="Pool">
-    <model:ioSpecification id="_uly3IXM2Ee2OqfZx83RB5g">
-      <model:inputSet id="_uly3InM2Ee2OqfZx83RB5g"/>
-      <model:outputSet id="_uly3I3M2Ee2OqfZx83RB5g"/>
+    <model:ioSpecification id="_MBrdQHVvEe2lEvbJv59qEA">
+      <model:inputSet id="_MBrdQXVvEe2lEvbJv59qEA"/>
+      <model:outputSet id="_MBrdQnVvEe2lEvbJv59qEA"/>
     </model:ioSpecification>
     <model:laneSet id="pool_laneSet">
       <model:lane id="_MDdXYXMpEe2CeaOiceoz9A" name="Tribunale">
@@ -21,27 +21,33 @@
       <model:lane id="_viajUHMpEe2CeaOiceoz9A" name="Coniugi">
         <model:flowNodeRef>_wYTCcHMpEe2CeaOiceoz9A</model:flowNodeRef>
         <model:flowNodeRef>_Nz8BEHMqEe2CeaOiceoz9A</model:flowNodeRef>
+        <model:flowNodeRef>_8-nRMHPCEe2Qws9v6R36pQ</model:flowNodeRef>
+        <model:flowNodeRef>_DE-LcHPDEe2Qws9v6R36pQ</model:flowNodeRef>
       </model:lane>
     </model:laneSet>
     <model:startEvent id="_MDdXYnMpEe2CeaOiceoz9A" name="Provvedimento che verifica la sussistenza dei requisiti richiesti dalla legge"/>
     <model:userTask id="_MDdXZnMpEe2CeaOiceoz9A" name="Nomina del cd. commissario giudiziale a cui sono affidati compiti di vigilanza sull’amministrazione del patrimonio della società"/>
     <model:userTask id="_wYTCcHMpEe2CeaOiceoz9A" name="Resa delle dichiarazioni prescritte e sottoscrizione dell’accordo di separazione"/>
-    <model:endEvent id="_Nz8BEHMqEe2CeaOiceoz9A" name="Conferma, entro 30 giorni, della loro intenzione"/>
+    <model:endEvent id="_Nz8BEHMqEe2CeaOiceoz9A" name="Entrata in vigore degli accordi"/>
+    <model:exclusiveGateway id="_8-nRMHPCEe2Qws9v6R36pQ" name="Conferma presso Ufficio, entro 30 giorni"/>
+    <model:endEvent id="_DE-LcHPDEe2Qws9v6R36pQ" name="Annullamento degli accordi"/>
     <model:sequenceFlow id="_MDdXd3MpEe2CeaOiceoz9A" name="" sourceRef="_MDdXYnMpEe2CeaOiceoz9A" targetRef="_MDdXZnMpEe2CeaOiceoz9A"/>
     <model:sequenceFlow id="_8aisUHMpEe2CeaOiceoz9A" name="" sourceRef="_MDdXZnMpEe2CeaOiceoz9A" targetRef="_wYTCcHMpEe2CeaOiceoz9A"/>
-    <model:sequenceFlow id="_OYBlkHMqEe2CeaOiceoz9A" name="" sourceRef="_wYTCcHMpEe2CeaOiceoz9A" targetRef="_Nz8BEHMqEe2CeaOiceoz9A"/>
+    <model:sequenceFlow id="_-u_CoHPCEe2Qws9v6R36pQ" name="" sourceRef="_wYTCcHMpEe2CeaOiceoz9A" targetRef="_8-nRMHPCEe2Qws9v6R36pQ"/>
+    <model:sequenceFlow id="_AJGQMHPDEe2Qws9v6R36pQ" name="" sourceRef="_8-nRMHPCEe2Qws9v6R36pQ" targetRef="_Nz8BEHMqEe2CeaOiceoz9A"/>
+    <model:sequenceFlow id="_EcYqUHPDEe2Qws9v6R36pQ" name="" sourceRef="_8-nRMHPCEe2Qws9v6R36pQ" targetRef="_DE-LcHPDEe2Qws9v6R36pQ"/>
   </model:process>
   <di:BPMNDiagram name="Concordato preventivo ">
     <di:BPMNPlane id="plane__MDcwUHMpEe2CeaOiceoz9A" bpmnElement="_MDcwUHMpEe2CeaOiceoz9A">
-      <di:BPMNShape id="_MDdXlXMpEe2CeaOiceoz9A" bpmnElement="_uly3IHM2Ee2OqfZx83RB5g" isHorizontal="true">
-        <dc:Bounds height="500.0" width="1080.0" x="0.0" y="0.0"/>
+      <di:BPMNShape id="_MDdXlXMpEe2CeaOiceoz9A" bpmnElement="_MBq2MHVvEe2lEvbJv59qEA" isHorizontal="true">
+        <dc:Bounds height="551.0" width="1080.0" x="0.0" y="0.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_MDdXmHMpEe2CeaOiceoz9A" bpmnElement="_MDdXYXMpEe2CeaOiceoz9A" isHorizontal="true">
         <dc:Bounds height="250.0" width="1050.0" x="30.0" y="0.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_MDdXnnMpEe2CeaOiceoz9A" bpmnElement="_MDdXYnMpEe2CeaOiceoz9A">
         <dc:Bounds height="30.0" width="30.0" x="134.0" y="68.0"/>
-        <di:BPMNLabel id="_ulzeMXM2Ee2OqfZx83RB5g" labelStyle="_ulzeMHM2Ee2OqfZx83RB5g">
+        <di:BPMNLabel id="_MBsrYXVvEe2lEvbJv59qEA" labelStyle="_MBsrYHVvEe2lEvbJv59qEA">
           <dc:Bounds height="17.0" width="571.0" x="-69.0" y="129.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
@@ -49,31 +55,53 @@
         <dc:Bounds height="110.0" width="220.0" x="403.0" y="40.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_vibKYHMpEe2CeaOiceoz9A" bpmnElement="_viajUHMpEe2CeaOiceoz9A" isHorizontal="true">
-        <dc:Bounds height="250.0" width="1050.0" x="30.0" y="250.0"/>
+        <dc:Bounds height="301.0" width="1050.0" x="30.0" y="250.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_wYTpgHMpEe2CeaOiceoz9A" bpmnElement="_wYTCcHMpEe2CeaOiceoz9A">
         <dc:Bounds height="90.0" width="180.0" x="431.0" y="359.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_Nz8oI3MqEe2CeaOiceoz9A" bpmnElement="_Nz8BEHMqEe2CeaOiceoz9A">
-        <dc:Bounds height="30.0" width="30.0" x="735.0" y="389.0"/>
-        <di:BPMNLabel id="_ulzeNHM2Ee2OqfZx83RB5g" labelStyle="_ulzeMHM2Ee2OqfZx83RB5g">
-          <dc:Bounds height="17.0" width="356.0" x="572.0" y="424.0"/>
+        <dc:Bounds height="30.0" width="30.0" x="863.0" y="306.0"/>
+        <di:BPMNLabel id="_MBtScXVvEe2lEvbJv59qEA" labelStyle="_MBsrYHVvEe2lEvbJv59qEA">
+          <dc:Bounds height="17.0" width="230.0" x="763.0" y="341.0"/>
+        </di:BPMNLabel>
+      </di:BPMNShape>
+      <di:BPMNShape id="_8-n4QXPCEe2Qws9v6R36pQ" bpmnElement="_8-nRMHPCEe2Qws9v6R36pQ">
+        <dc:Bounds height="43.0" width="43.0" x="681.0" y="382.0"/>
+        <di:BPMNLabel id="_MBtScnVvEe2lEvbJv59qEA" labelStyle="_MBsrYHVvEe2lEvbJv59qEA">
+          <dc:Bounds height="17.0" width="296.0" x="664.0" y="429.0"/>
+        </di:BPMNLabel>
+      </di:BPMNShape>
+      <di:BPMNShape id="_DE_ZkHPDEe2Qws9v6R36pQ" bpmnElement="_DE-LcHPDEe2Qws9v6R36pQ">
+        <dc:Bounds height="30.0" width="30.0" x="863.0" y="474.0"/>
+        <di:BPMNLabel id="_MBt5gHVvEe2lEvbJv59qEA" labelStyle="_MBsrYHVvEe2lEvbJv59qEA">
+          <dc:Bounds height="17.0" width="192.0" x="782.0" y="521.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
       <di:BPMNEdge id="_MDdXrXMpEe2CeaOiceoz9A" bpmnElement="_MDdXd3MpEe2CeaOiceoz9A">
-        <di_1:waypoint x="162.0" y="89.0"/>
-        <di_1:waypoint x="403.0" y="89.0"/>
+        <di_1:waypoint x="163.0" y="82.0"/>
+        <di_1:waypoint x="403.0" y="82.0"/>
       </di:BPMNEdge>
       <di:BPMNEdge id="_8ajTYHMpEe2CeaOiceoz9A" bpmnElement="_8aisUHMpEe2CeaOiceoz9A">
         <di_1:waypoint x="515.0" y="150.0"/>
         <di_1:waypoint x="515.0" y="359.0"/>
       </di:BPMNEdge>
-      <di:BPMNEdge id="_OYCMoHMqEe2CeaOiceoz9A" bpmnElement="_OYBlkHMqEe2CeaOiceoz9A">
-        <di_1:waypoint x="611.0" y="404.0"/>
-        <di_1:waypoint x="735.0" y="404.0"/>
+      <di:BPMNEdge id="_-u_psHPCEe2Qws9v6R36pQ" bpmnElement="_-u_CoHPCEe2Qws9v6R36pQ">
+        <di_1:waypoint x="611.0" y="403.0"/>
+        <di_1:waypoint x="681.0" y="403.0"/>
+      </di:BPMNEdge>
+      <di:BPMNEdge id="_AJG3QHPDEe2Qws9v6R36pQ" bpmnElement="_AJGQMHPDEe2Qws9v6R36pQ">
+        <di_1:waypoint x="702.0" y="382.0"/>
+        <di_1:waypoint x="702.0" y="320.0"/>
+        <di_1:waypoint x="863.0" y="320.0"/>
+      </di:BPMNEdge>
+      <di:BPMNEdge id="_Ecdi0HPDEe2Qws9v6R36pQ" bpmnElement="_EcYqUHPDEe2Qws9v6R36pQ">
+        <di_1:waypoint x="702.0" y="425.0"/>
+        <di_1:waypoint x="702.0" y="488.0"/>
+        <di_1:waypoint x="863.0" y="488.0"/>
       </di:BPMNEdge>
     </di:BPMNPlane>
-    <di:BPMNLabelStyle id="_ulzeMHM2Ee2OqfZx83RB5g">
+    <di:BPMNLabelStyle id="_MBsrYHVvEe2lEvbJv59qEA">
       <dc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name=".AppleSystemUIFont" size="9.0"/>
     </di:BPMNLabelStyle>
   </di:BPMNDiagram>
