@@ -8,3 +8,14 @@ Sono stati individuati e modellati i seguenti processi:
 -LiquidazioneCoattaAmministrativa
 
 Per ognuno dei processi riportati è stata creata una pool, divisa in swimlanes, ognuna delle quali contiene le task svolte dall'attore associato a quella precisa swimlane.
+
+
+Per il processo AumentoCapitaleSociale sono stati realizzati i seguenti punti:
+-Modellazione 
+-Definizione Data Model
+-Definizione Pool Variables
+-Definizione Contratti
+-Definizione Forms 
+-Definizione Organigramma
+
+->RUN
