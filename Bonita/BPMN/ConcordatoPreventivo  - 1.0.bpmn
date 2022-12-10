@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="7.15.0" expressionLanguage="http://groovy.apache.org/" targetNamespace="http://bonitasoft.com/_rmoOUHh7Ee2DAsEZBK0neQ">
   <model:collaboration id="_rmoOUHh7Ee2DAsEZBK0neQ">
-    <model:participant id="_XPViEHicEe2DAsEZBK0neQ" name="ConcordatoPreventivo" processRef="_rnmesHh7Ee2DAsEZBK0neQ"/>
+    <model:participant id="_LdvfIHijEe2rgtGQFvnMsw" name="ConcordatoPreventivo" processRef="_rnmesHh7Ee2DAsEZBK0neQ"/>
     <model:participant id="_-Z-GoHh9Ee2DAsEZBK0neQ" name="tribunale"/>
     <model:participant id="__2-QIHh9Ee2DAsEZBK0neQ" name="coniuge"/>
   </model:collaboration>
   <model:process id="_rnmesHh7Ee2DAsEZBK0neQ" name="ConcordatoPreventivo">
-    <model:ioSpecification id="_XPXXQXicEe2DAsEZBK0neQ">
-      <model:dataInput id="_XPXXQnicEe2DAsEZBK0neQ" itemSubjectRef="_7G1QAHh_Ee2DAsEZBK0neQ"/>
-      <model:inputSet id="_XPXXQ3icEe2DAsEZBK0neQ">
-        <model:dataInputRefs>_XPXXQnicEe2DAsEZBK0neQ</model:dataInputRefs>
+    <model:ioSpecification id="_Ld6eQHijEe2rgtGQFvnMsw">
+      <model:dataInput id="_Ld7FUHijEe2rgtGQFvnMsw" itemSubjectRef="_7G1QAHh_Ee2DAsEZBK0neQ"/>
+      <model:inputSet id="_Ld7FUXijEe2rgtGQFvnMsw">
+        <model:dataInputRefs>_Ld7FUHijEe2rgtGQFvnMsw</model:dataInputRefs>
       </model:inputSet>
-      <model:outputSet id="_XPXXR3icEe2DAsEZBK0neQ"/>
+      <model:outputSet id="_Ld-IoHijEe2rgtGQFvnMsw"/>
     </model:ioSpecification>
     <model:laneSet id="concordatopreventivo_laneSet">
       <model:lane id="_rn_gQHh7Ee2DAsEZBK0neQ" name="Tribunale">
@@ -27,48 +27,48 @@
         <model:flowNodeRef>_gZefwHiDEe2DAsEZBK0neQ</model:flowNodeRef>
       </model:lane>
     </model:laneSet>
-    <model:dataObject id="DataObject_XPXXQHicEe2DAsEZBK0neQ_7G1QAHh_Ee2DAsEZBK0neQ" name="procedimentogiudiziario" isCollection="false" itemSubjectRef="_7G1QAHh_Ee2DAsEZBK0neQ"/>
+    <model:dataObject id="DataObject_Ld53MHijEe2rgtGQFvnMsw_7G1QAHh_Ee2DAsEZBK0neQ" name="procedimentogiudiziario" isCollection="false" itemSubjectRef="_7G1QAHh_Ee2DAsEZBK0neQ"/>
     <model:startEvent id="_roG1AHh7Ee2DAsEZBK0neQ" name="Provvedimento che verifica la sussistenza dei requisiti richiesti dalla legge"/>
     <model:userTask id="_roTpUHh7Ee2DAsEZBK0neQ" name="Nomina del cd. commissario giudiziale a cui sono affidati compiti di vigilanza sull’amministrazione del patrimonio della società">
-      <model:performer id="_XPYlYHicEe2DAsEZBK0neQ">
+      <model:performer id="_LeOnUHijEe2rgtGQFvnMsw">
         <model:resourceRef>_-Z-GoHh9Ee2DAsEZBK0neQ</model:resourceRef>
       </model:performer>
     </model:userTask>
     <model:userTask id="_roq1sHh7Ee2DAsEZBK0neQ" name="Resa delle dichiarazioni prescritte e sottoscrizione dell’accordo di separazione">
-      <model:performer id="_XPYlYnicEe2DAsEZBK0neQ">
+      <model:performer id="_LeSRsHijEe2rgtGQFvnMsw">
         <model:resourceRef>__2-QIHh9Ee2DAsEZBK0neQ</model:resourceRef>
       </model:performer>
     </model:userTask>
     <model:endEvent id="_ro2b4Hh7Ee2DAsEZBK0neQ" name="Entrata in vigore degli accordi"/>
-    <model:exclusiveGateway id="_rpMaIHh7Ee2DAsEZBK0neQ" name="Conferma2"/>
+    <model:exclusiveGateway id="_rpMaIHh7Ee2DAsEZBK0neQ" name="Conferma accordo"/>
     <model:endEvent id="_rpZOcHh7Ee2DAsEZBK0neQ" name="Annullamento degli accordi"/>
-    <model:userTask id="_vqUl4Hh-Ee2DAsEZBK0neQ" name="ConfermaPresoUfficio">
-      <model:performer id="_XPYlZ3icEe2DAsEZBK0neQ">
+    <model:userTask id="_vqUl4Hh-Ee2DAsEZBK0neQ" name="ConfermaPressoUfficio">
+      <model:performer id="_LeUG4nijEe2rgtGQFvnMsw">
         <model:resourceRef>__2-QIHh9Ee2DAsEZBK0neQ</model:resourceRef>
       </model:performer>
     </model:userTask>
-    <model:exclusiveGateway id="_gZefwHiDEe2DAsEZBK0neQ" name="Conferma1"/>
+    <model:exclusiveGateway id="_gZefwHiDEe2DAsEZBK0neQ" name="Firma accordo"/>
     <model:sequenceFlow id="_rpmp0Hh7Ee2DAsEZBK0neQ" name="" sourceRef="_roG1AHh7Ee2DAsEZBK0neQ" targetRef="_roTpUHh7Ee2DAsEZBK0neQ"/>
     <model:sequenceFlow id="_rpwa0Hh7Ee2DAsEZBK0neQ" name="" sourceRef="_roTpUHh7Ee2DAsEZBK0neQ" targetRef="_roq1sHh7Ee2DAsEZBK0neQ"/>
-    <model:sequenceFlow id="_rqCHoHh7Ee2DAsEZBK0neQ" name="" sourceRef="_rpMaIHh7Ee2DAsEZBK0neQ" targetRef="_ro2b4Hh7Ee2DAsEZBK0neQ">
-      <model:conditionExpression xsi:type="model:tFormalExpression" id="_XPbosHicEe2DAsEZBK0neQ" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica2 == true</model:conditionExpression>
+    <model:sequenceFlow id="_rqCHoHh7Ee2DAsEZBK0neQ" name="SI" sourceRef="_rpMaIHh7Ee2DAsEZBK0neQ" targetRef="_ro2b4Hh7Ee2DAsEZBK0neQ">
+      <model:conditionExpression xsi:type="model:tFormalExpression" id="_LehiQHijEe2rgtGQFvnMsw" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica2 == true</model:conditionExpression>
     </model:sequenceFlow>
-    <model:sequenceFlow id="_rqHAIHh7Ee2DAsEZBK0neQ" name="" sourceRef="_rpMaIHh7Ee2DAsEZBK0neQ" targetRef="_rpZOcHh7Ee2DAsEZBK0neQ">
-      <model:conditionExpression xsi:type="model:tFormalExpression" id="_XPbosXicEe2DAsEZBK0neQ" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica2 == false</model:conditionExpression>
+    <model:sequenceFlow id="_rqHAIHh7Ee2DAsEZBK0neQ" name="NO" sourceRef="_rpMaIHh7Ee2DAsEZBK0neQ" targetRef="_rpZOcHh7Ee2DAsEZBK0neQ">
+      <model:conditionExpression xsi:type="model:tFormalExpression" id="_LejXcHijEe2rgtGQFvnMsw" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica2 == false</model:conditionExpression>
     </model:sequenceFlow>
     <model:sequenceFlow id="_8JRZ4Hh-Ee2DAsEZBK0neQ" name="" sourceRef="_vqUl4Hh-Ee2DAsEZBK0neQ" targetRef="_rpMaIHh7Ee2DAsEZBK0neQ"/>
     <model:sequenceFlow id="_kkoRkHiDEe2DAsEZBK0neQ" name="" sourceRef="_roq1sHh7Ee2DAsEZBK0neQ" targetRef="_gZefwHiDEe2DAsEZBK0neQ"/>
-    <model:sequenceFlow id="_mRUc4HiDEe2DAsEZBK0neQ" name="" sourceRef="_gZefwHiDEe2DAsEZBK0neQ" targetRef="_rpZOcHh7Ee2DAsEZBK0neQ">
-      <model:conditionExpression xsi:type="model:tFormalExpression" id="_XPcPwHicEe2DAsEZBK0neQ" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica1 == false</model:conditionExpression>
+    <model:sequenceFlow id="_mRUc4HiDEe2DAsEZBK0neQ" name="NO" sourceRef="_gZefwHiDEe2DAsEZBK0neQ" targetRef="_rpZOcHh7Ee2DAsEZBK0neQ">
+      <model:conditionExpression xsi:type="model:tFormalExpression" id="_LeklkHijEe2rgtGQFvnMsw" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica1 == false</model:conditionExpression>
     </model:sequenceFlow>
-    <model:sequenceFlow id="_npNc4HiDEe2DAsEZBK0neQ" name="" sourceRef="_gZefwHiDEe2DAsEZBK0neQ" targetRef="_vqUl4Hh-Ee2DAsEZBK0neQ">
-      <model:conditionExpression xsi:type="model:tFormalExpression" id="_XPcPwXicEe2DAsEZBK0neQ" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica1 == true</model:conditionExpression>
+    <model:sequenceFlow id="_npNc4HiDEe2DAsEZBK0neQ" name="SI" sourceRef="_gZefwHiDEe2DAsEZBK0neQ" targetRef="_vqUl4Hh-Ee2DAsEZBK0neQ">
+      <model:conditionExpression xsi:type="model:tFormalExpression" id="_LeklkXijEe2rgtGQFvnMsw" evaluatesToTypeRef="java:java.lang.Boolean">procedimentogiudiziario.conferma_verifica1 == true</model:conditionExpression>
     </model:sequenceFlow>
   </model:process>
   <model:itemDefinition id="_7G1QAHh_Ee2DAsEZBK0neQ" structureRef="java:com.company.model.ProcedimentoGiudiziario"/>
   <di:BPMNDiagram name="ConcordatoPreventivo ">
     <di:BPMNPlane id="plane__rmoOUHh7Ee2DAsEZBK0neQ" bpmnElement="_rmoOUHh7Ee2DAsEZBK0neQ">
-      <di:BPMNShape id="_rntMYHh7Ee2DAsEZBK0neQ" bpmnElement="_XPViEHicEe2DAsEZBK0neQ" isHorizontal="true">
+      <di:BPMNShape id="_rntMYHh7Ee2DAsEZBK0neQ" bpmnElement="_LdvfIHijEe2rgtGQFvnMsw" isHorizontal="true">
         <dc:Bounds height="551.0" width="1145.0" x="0.0" y="0.0"/>
       </di:BPMNShape>
       <di:BPMNShape id="_roAuYHh7Ee2DAsEZBK0neQ" bpmnElement="_rn_gQHh7Ee2DAsEZBK0neQ" isHorizontal="true">
@@ -76,7 +76,7 @@
       </di:BPMNShape>
       <di:BPMNShape id="_roIDIHh7Ee2DAsEZBK0neQ" bpmnElement="_roG1AHh7Ee2DAsEZBK0neQ">
         <dc:Bounds height="30.0" width="30.0" x="164.0" y="73.0"/>
-        <di:BPMNLabel id="_XPX-UXicEe2DAsEZBK0neQ" labelStyle="_XPX-UHicEe2DAsEZBK0neQ">
+        <di:BPMNLabel id="_LeJHwXijEe2rgtGQFvnMsw" labelStyle="_LeJHwHijEe2rgtGQFvnMsw">
           <dc:Bounds height="17.0" width="571.0" x="-55.0" y="171.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
@@ -91,19 +91,19 @@
       </di:BPMNShape>
       <di:BPMNShape id="_ro9woHh7Ee2DAsEZBK0neQ" bpmnElement="_ro2b4Hh7Ee2DAsEZBK0neQ">
         <dc:Bounds height="30.0" width="30.0" x="949.0" y="292.0"/>
-        <di:BPMNLabel id="_XPYlZHicEe2DAsEZBK0neQ" labelStyle="_XPX-UHicEe2DAsEZBK0neQ">
+        <di:BPMNLabel id="_LeTf0HijEe2rgtGQFvnMsw" labelStyle="_LeJHwHijEe2rgtGQFvnMsw">
           <dc:Bounds height="17.0" width="230.0" x="749.0" y="327.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
       <di:BPMNShape id="_rpOPUHh7Ee2DAsEZBK0neQ" bpmnElement="_rpMaIHh7Ee2DAsEZBK0neQ">
         <dc:Bounds height="43.0" width="43.0" x="795.0" y="371.0"/>
-        <di:BPMNLabel id="_XPYlZXicEe2DAsEZBK0neQ" labelStyle="_XPX-UHicEe2DAsEZBK0neQ">
-          <dc:Bounds height="17.0" width="66.0" x="766.0" y="431.0"/>
+        <di:BPMNLabel id="_LeUG4HijEe2rgtGQFvnMsw" labelStyle="_LeJHwHijEe2rgtGQFvnMsw">
+          <dc:Bounds height="17.0" width="118.0" x="740.0" y="431.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
       <di:BPMNShape id="_rpbDoHh7Ee2DAsEZBK0neQ" bpmnElement="_rpZOcHh7Ee2DAsEZBK0neQ">
         <dc:Bounds height="30.0" width="30.0" x="964.0" y="450.0"/>
-        <di:BPMNLabel id="_XPYlZnicEe2DAsEZBK0neQ" labelStyle="_XPX-UHicEe2DAsEZBK0neQ">
+        <di:BPMNLabel id="_LeUG4XijEe2rgtGQFvnMsw" labelStyle="_LeJHwHijEe2rgtGQFvnMsw">
           <dc:Bounds height="17.0" width="192.0" x="802.0" y="497.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
@@ -112,8 +112,8 @@
       </di:BPMNShape>
       <di:BPMNShape id="_gZpe4HiDEe2DAsEZBK0neQ" bpmnElement="_gZefwHiDEe2DAsEZBK0neQ">
         <dc:Bounds height="43.0" width="43.0" x="557.0" y="367.0"/>
-        <di:BPMNLabel id="_XPYlaXicEe2DAsEZBK0neQ" labelStyle="_XPX-UHicEe2DAsEZBK0neQ">
-          <dc:Bounds height="17.0" width="66.0" x="545.0" y="415.0"/>
+        <di:BPMNLabel id="_LeUG5HijEe2rgtGQFvnMsw" labelStyle="_LeJHwHijEe2rgtGQFvnMsw">
+          <dc:Bounds height="17.0" width="96.0" x="530.0" y="415.0"/>
         </di:BPMNLabel>
       </di:BPMNShape>
       <di:BPMNEdge id="_rpn38Hh7Ee2DAsEZBK0neQ" bpmnElement="_rpmp0Hh7Ee2DAsEZBK0neQ">
@@ -128,11 +128,17 @@
         <di_1:waypoint x="823.0" y="377.0"/>
         <di_1:waypoint x="823.0" y="319.0"/>
         <di_1:waypoint x="955.0" y="319.0"/>
+        <di:BPMNLabel>
+          <dc:Bounds height="17.0" width="14.0" x="853.0" y="301.0"/>
+        </di:BPMNLabel>
       </di:BPMNEdge>
       <di:BPMNEdge id="_rqI1UHh7Ee2DAsEZBK0neQ" bpmnElement="_rqHAIHh7Ee2DAsEZBK0neQ">
         <di_1:waypoint x="817.0" y="413.0"/>
         <di_1:waypoint x="817.0" y="460.0"/>
         <di_1:waypoint x="964.0" y="460.0"/>
+        <di:BPMNLabel>
+          <dc:Bounds height="17.0" width="14.0" x="860.0" y="442.0"/>
+        </di:BPMNLabel>
       </di:BPMNEdge>
       <di:BPMNEdge id="_8JSA8Hh-Ee2DAsEZBK0neQ" bpmnElement="_8JRZ4Hh-Ee2DAsEZBK0neQ">
         <di_1:waypoint x="761.0" y="393.0"/>
@@ -147,13 +153,19 @@
         <di_1:waypoint x="578.0" y="502.0"/>
         <di_1:waypoint x="979.0" y="502.0"/>
         <di_1:waypoint x="979.0" y="479.0"/>
+        <di:BPMNLabel>
+          <dc:Bounds height="17.0" width="14.0" x="737.0" y="484.0"/>
+        </di:BPMNLabel>
       </di:BPMNEdge>
       <di:BPMNEdge id="_npcGYHiDEe2DAsEZBK0neQ" bpmnElement="_npNc4HiDEe2DAsEZBK0neQ">
         <di_1:waypoint x="593.0" y="395.0"/>
         <di_1:waypoint x="641.0" y="395.0"/>
+        <di:BPMNLabel>
+          <dc:Bounds height="17.0" width="14.0" x="610.0" y="377.0"/>
+        </di:BPMNLabel>
       </di:BPMNEdge>
     </di:BPMNPlane>
-    <di:BPMNLabelStyle id="_XPX-UHicEe2DAsEZBK0neQ">
+    <di:BPMNLabelStyle id="_LeJHwHijEe2rgtGQFvnMsw">
       <dc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name=".AppleSystemUIFont" size="9.0"/>
     </di:BPMNLabelStyle>
   </di:BPMNDiagram>
