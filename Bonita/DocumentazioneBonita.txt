@@ -17,5 +17,3 @@ Per il processo AmministrazioneStraordinaria sono stati realizzati i seguenti pu
 -Definizione Contratti
 -Definizione Forms 
 -Definizione Organigramma
-
-->RUN
