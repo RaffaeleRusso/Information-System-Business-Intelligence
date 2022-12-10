@@ -10,7 +10,7 @@ Sono stati individuati e modellati i seguenti processi:
 Per ognuno dei processi riportati è stata creata una pool, divisa in swimlanes, ognuna delle quali contiene le task svolte dall'attore associato a quella precisa swimlane.
 
 
-Per il processo AumentoCapitaleSociale sono stati realizzati i seguenti punti:
+Per il processo AmministrazioneStraordinaria sono stati realizzati i seguenti punti:
 -Modellazione 
 -Definizione Data Model
 -Definizione Pool Variables
